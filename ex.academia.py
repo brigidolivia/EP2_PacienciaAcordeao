@@ -14,4 +14,5 @@ def cria_baralho():
     return random.choices(quatro, k=len(quatro))
 print(cria_baralho())
 
-#
+#Encontrando o naipe
+#Encontrando
