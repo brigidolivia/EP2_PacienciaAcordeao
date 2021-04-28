@@ -15,4 +15,15 @@ def cria_baralho():
 print(cria_baralho())
 
 #Encontrando o naipe
-#Encontrando
+def extrai_naipe(x):
+    dois=str(x)
+    naipe=dois[1]
+    return naipe
+print(extrai_naipe("A3"))
+
+#Encontrando o valor
+def extrai_valor(x):
+    dois=str(x)
+    valor=dois[0:-1]
+    return valor
+print(extrai_valor("A3"))
