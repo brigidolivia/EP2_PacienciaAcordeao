@@ -1,4 +1,4 @@
-#Criando um baralho, só que agora de ordem aleatória:
+#Criando um baralho, só que agora de ordem aleatória: 
 import random
 def cria_baralho():
     naipes=['♠','♥','♦',' ♣']
