@@ -12,7 +12,7 @@ def cria_baralho():
             i2+=1
         i+=1
     #Random shuffle- Ela altera o valor por referencia, ou seja, altera direto na fonte, o endereço de memória(Diferente do que vc viu até o momento)
-    random.shuffle(mesa)   
+    #random.shuffle(mesa)   
     return mesa
 
 #Encontrando o naipe
@@ -77,7 +77,7 @@ def possui_movimentos_possiveis(lista):
         return True
 
 #INPUT PRA INVALIDAR STRING NO IMPUT:
-def try_input(textodoinput):
+def peganumerodacarta(textodoinput):
     
     #Modo de validar (vi no stackoverflow)
     numero_invalido = True
@@ -87,4 +87,4 @@ def try_input(textodoinput):
             numero_invalido = False
         except ValueError:
             print("O que foi digitado não é um numero inteiro válido.")
-    return valor_entrada
+    return valor_entrada-1 #PQ -1? Pq o meu indice começa no zero, mas o de exibição começa no 1
