@@ -39,9 +39,9 @@ while not pare:
             anterior=mesa[cartaescolhida-1]
             mesa= empilha(mesa, cartaescolhida, anterior)
         
-        else movimentos==[1]:
+        else movimentos==[3]:
             terceira_anterior=mesa[cartaescolhida-3]
-            
+            mesa= empilha(mesa, cartaescolhida, terceira_anterior)
 
 
 
