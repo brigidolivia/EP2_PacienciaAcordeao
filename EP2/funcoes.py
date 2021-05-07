@@ -10,8 +10,10 @@ def cria_baralho():
         while i2<len(n):
             mesa.append(n[i2]+naipes[i])
             i2+=1
-        i+=1   
-    return random.shuffle(mesa)
+        i+=1
+    #Random shuffle- Ela altera o valor por referencia, ou seja, altera direto na fonte, o endereço de memória(Diferente do que vc viu até o momento)
+    random.shuffle(mesa)   
+    return mesa
 
 #Encontrando o naipe
 def extrai_naipe(x): 
