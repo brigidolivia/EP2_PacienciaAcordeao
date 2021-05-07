@@ -21,12 +21,12 @@ while not pare:
             pare=True
 
     movimentos= lista_movimentos_possiveis(cartaescolhida)
-
     else:
-        if movimentos==0:
-            movimentos= ('Vish, carta inválida. Escolha outra:')
     
-        elif movimentos==[1,3]:
+        if movimentos==[]:
+            movimentos= input('Vish, carta inválida. Escolha outra:')
+    
+        if movimentos==[1,3]:
             anterior=mesa[cartaescolhida-1]
             terceira_anterior=mesa[cartaescolhida-3]
             posicao_escolhida= input("Duas possibilidades! {} ou {}?".format(anterior, terceira_anterior))
@@ -35,11 +35,11 @@ while not pare:
             elif posicao_escolhida==terceira_anterior:
                 mesa= empilha(mesa, cartaescolhida, terceira_anterior)
         
-        elif movimentos==[1]:
+        if movimentos==[1]:
             anterior=mesa[cartaescolhida-1]
             mesa= empilha(mesa, cartaescolhida, anterior)
         
-        else movimentos==[3]:
+        if movimentos==[3]:
             terceira_anterior=mesa[cartaescolhida-3]
             mesa= empilha(mesa, cartaescolhida, terceira_anterior)
 
