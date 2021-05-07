@@ -1,6 +1,7 @@
 input('Quer jogar?')
 mesa= cria_baralho()
-while possui_movimentos_possiveis(mesa)!=0:
+pare=False
+while not pare:
     print(mesa)
     cartaescolhida=input("Qual posição a sua carta escolhida está?")
     if mesa ==1:
@@ -38,7 +39,7 @@ while possui_movimentos_possiveis(mesa)!=0:
             anterior=mesa[cartaescolhida-1]
             mesa= empilha(mesa, cartaescolhida, anterior)
         
-        else:
+        else movimentos==[1]:
             terceira_anterior=mesa[cartaescolhida-3]
             
 
