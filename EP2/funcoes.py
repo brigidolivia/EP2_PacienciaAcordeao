@@ -75,3 +75,16 @@ def possui_movimentos_possiveis(lista):
         return False
     else:
         return True
+
+#INPUT PRA INVALIDAR STRING NO IMPUT:
+def try_input(textodoinput):
+    
+    #Modo de validar (vi no stackoverflow)
+    numero_invalido = True
+    while numero_invalido:
+        try:
+            valor_entrada = int(input(textodoinput))
+            numero_invalido = False
+        except ValueError:
+            print("O que foi digitado não é um numero inteiro válido.")
+    return valor_entrada
