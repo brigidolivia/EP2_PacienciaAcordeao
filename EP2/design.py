@@ -5,15 +5,30 @@ def print_estilizado(mesa):
     
     for i in range (0, len(mesa)):
         naipe_corrente = extrai_naipe(mesa[i])
-        if naipe_corrente == '♠' or naipe_corrente == '♣':
+        if naipe_corrente == '♠':
             cor_corrente = Fore.BLUE
-        elif naipe_corrente == '♥' or naipe_corrente == '♦':
+        
+        elif naipe_corrente == '♣':
+            cor_corrente= Fore.GREEN
+
+        elif naipe_corrente == '♥':
             cor_corrente = Fore.RED
-        print(cor_corrente+
-        """
-        {0}. 
-        {1}
-        """
-        .format((i+1),(mesa[i])))
+        
+        else:
+            cor_corrente = Fore.YELLOW
+        #Três aspas== Conseguir escrever em multilinhas
+        print(
+            """
+            
+        {0}{1}.{2}
+                  ┌─────────┐
+                  │{3}░░░░░░░│
+                  │░░░░░░░░░│
+                  │░░░░░░░░░│
+                  │░░░{4}░░░░░│
+                  │░░░░░░░░░│
+                  │░░░░░░░░░│
+                  │░░░░░░░{3}│
+                  └─────────┘""".format((Fore.WHITE),(i+1),(cor_corrente),(extrai_valor(mesa[i])),(extrai_naipe(mesa[i]))))
     print(Fore.WHITE)
     return
