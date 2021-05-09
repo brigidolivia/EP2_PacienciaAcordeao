@@ -13,7 +13,7 @@ def cria_baralho():
         i+=1
     #Random shuffle- Ela altera o valor por referencia, ou seja, altera direto na fonte, o endereço de memória(Diferente do que vc viu até o momento)
     random.shuffle(mesa)   
-    return ['6♥','J♥','9♣','9♥']#mesa
+    return mesa #['6♥','J♥','9♣','9♥']- Jogo Rápido para teste
 
 #Encontrando o naipe
 def extrai_naipe(x): 
