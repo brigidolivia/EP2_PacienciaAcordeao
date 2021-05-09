@@ -34,3 +34,6 @@ def print_estilizado(mesa):
                   .format((Fore.WHITE),(i+1),(cor_corrente),(extrai_valor(mesa[i]).ljust(2)),(extrai_naipe(mesa[i]))))
     print(Fore.WHITE)
     return
+
+def grifa(texto):
+    return(Back.YELLOW+Fore.BLACK+texto+Fore.WHITE+Back.BLACK)
