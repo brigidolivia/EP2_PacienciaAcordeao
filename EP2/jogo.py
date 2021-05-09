@@ -2,9 +2,13 @@ from funcoes import *
 from design import *
 
 print("Olá! Bem vindo ao Barzin da esquina. Aqui sempre tem alguém jogando baralho")
-input("Olha lá! Tem gente jogando acordeão. Quer se juntar? (APERTE ENTER)")
+#input("Olha lá! Tem gente jogando acordeão. Quer se juntar? (APERTE ENTER)")
 
 #COLOCAR TEXTO AQUI
+with open ("EP2/textodojogo.txt",'r',encoding='utf8') as instrucoes:#encoding='utf8'- Aceitar acentos. padrão-inglês UNICODE-Mais memória, mais variedade
+    texto= instrucoes.read()
+print(texto)
+
 input("Agora sim! Aperte Enter para começar")
 mesa= cria_baralho()
 

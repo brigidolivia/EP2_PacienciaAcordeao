@@ -1,0 +1,10 @@
+                               REGRAS DO JOGO                            
+------------------------------------------------------------------------------
+Neste jogo o objetivo é bem claro: Empilhar as cartas até que sobre só uma pilha.
+
+Não esqueça dos dois únicos passos:
+1. Ou empilha na carta imediatamente anterior a que você escolheu;
+2. Ou empilha na terceira anterior
+
+             Sabendo o objetivo, não esqueça a sua necessidade principal: 
+---------------Ter movimentos possíveis até chegar na penúltima carta!---------
