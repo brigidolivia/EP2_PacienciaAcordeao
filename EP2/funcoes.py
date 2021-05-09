@@ -13,7 +13,7 @@ def cria_baralho():
         i+=1
     #Random shuffle- Ela altera o valor por referencia, ou seja, altera direto na fonte, o endereço de memória(Diferente do que vc viu até o momento)
     random.shuffle(mesa)   
-    return mesa
+    return ['6♥','J♥','9♣','9♥']#mesa
 
 #Encontrando o naipe
 def extrai_naipe(x): 
@@ -57,17 +57,20 @@ def empilha(mesa, indice_escolhido, indice_substituido):
     return mesa_atualizada
 
 #Possibilidades
-def possui_movimentos_possiveis(lista):
+def possui_movimentos_possiveis(mesa):
     possibilidades=0
-    for i in range (0,len(lista)):
-        escolhida=lista[i]
-        if i!=0:
-            anterior=lista[i-1]
+    for i in range (0,len(mesa)):
+        escolhida=mesa[i]
+        if i==0:
+            possibilidades=possibilidades
+
+        elif i!=0:
+            anterior=mesa[i-1]
             if extrai_valor(escolhida)==extrai_valor(anterior) or extrai_naipe(escolhida)==extrai_naipe(anterior):
                 possibilidades+=1
 
-        if i!=2 or i!=1:    
-            terceira_anterior=lista[i-3]
+        elif i!=2 or i!=1:
+            terceira_anterior=mesa[i-3]
             if extrai_valor(escolhida)==extrai_valor(terceira_anterior) or extrai_naipe(escolhida)==extrai_naipe(terceira_anterior):
                 possibilidades+=1
     
