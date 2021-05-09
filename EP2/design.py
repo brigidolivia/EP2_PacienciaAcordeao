@@ -17,18 +17,20 @@ def print_estilizado(mesa):
         else:
             cor_corrente = Fore.YELLOW
         #Três aspas== Conseguir escrever em multilinhas
+        #ljust(quantascasas)= Imprimir certa quantidade de casas e preencher com espaços se faltar (à direita)
         print(
             """
-            
-        {0}{1}.{2}
-                  ┌─────────┐
-                  │{3}░░░░░░░│
-                  │░░░░░░░░░│
-                  │░░░░░░░░░│
-                  │░░░{4}░░░░░│
-                  │░░░░░░░░░│
-                  │░░░░░░░░░│
-                  │░░░░░░░{3}│
-                  └─────────┘""".format((Fore.WHITE),(i+1),(cor_corrente),(extrai_valor(mesa[i])),(extrai_naipe(mesa[i]))))
+{0}{1}.{2}
+┌─────────┐
+│{3}░░░░░░░│
+│░░░░░░░░░│
+│░░░░░░░░░│
+│░░░{4}░░░░░│
+│░░░░░░░░░│
+│░░░░░░░░░│
+│░░░░░░░{3}│
+└─────────┘
+"""
+                  .format((Fore.WHITE),(i+1),(cor_corrente),(extrai_valor(mesa[i]).ljust(2)),(extrai_naipe(mesa[i]))))
     print(Fore.WHITE)
     return
