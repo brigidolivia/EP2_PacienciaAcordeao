@@ -5,7 +5,7 @@ print("Olá! Bem vindo ao Barzin da esquina. Aqui sempre tem alguém jogando bar
 input("Olha lá! Tem gente jogando Acordeão. Quer se juntar? Eu te explico as regras (APERTE ENTER)")
 
 #COLOCAR TEXTO AQUI
-with open ("EP2/textodojogo.txt",'r',encoding='utf8') as instrucoes:#encoding='utf8'- Aceitar acentos. padrão-inglês UNICODE-Mais memória, mais variedade
+with open ("EP2_PacienciaAcordeao.py/EP2/textodojogo.txt",'r',encoding='utf8') as instrucoes:#encoding='utf8'- Aceitar acentos. padrão-inglês UNICODE-Mais memória, mais variedade
     texto= instrucoes.read()
 print(texto)
 
